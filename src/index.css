@@ -127,6 +127,7 @@ body {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
   font-size: 12px;
   font-weight: 600;
@@ -135,6 +136,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
+  touch-action: manipulation;
 }
 
 .btn-primary {
@@ -198,6 +200,38 @@ body {
   align-items: center;
 }
 
+/* Mobile Tabs Switcher */
+.mode-toggle-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e2e8f0;
+  padding: 3px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.mode-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mode-tab-btn.active {
+  background: #ffffff;
+  color: #1e3a8a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 /* Quick Bar */
 .quick-helpers-bar {
   width: 760px;
@@ -255,6 +289,31 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
+/* Responsive Viewport Scroll Container for A4 Paper */
+.invoice-viewport-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.mobile-scroll-hint {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: #64748b;
+  margin-bottom: 8px;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+}
+
 /* The A4 Canvas Sheet */
 .invoice-wrapper {
   width: 750px;
@@ -262,6 +321,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border-radius: 2px;
   margin: 0 auto;
+  transition: transform 0.2s ease;
 }
 
 .invoice-sheet {
@@ -547,7 +607,7 @@ body {
   font-size: inherit;
   font-weight: inherit;
   color: inherit;
-  padding: 1px 3px;
+  padding: 2px 4px;
   border-radius: 2px;
   outline: none;
   width: 100%;
@@ -574,7 +634,7 @@ body {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  padding: 2px 3px;
+  padding: 2px 4px;
   border-radius: 2px;
   outline: none;
   width: 100%;
@@ -609,6 +669,48 @@ body {
 
 .pure-text.text-center {
   text-align: center;
+}
+
+/* Mobile Edit Form View */
+.mobile-form-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mobile-item-card {
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 /* Modal */
@@ -655,8 +757,8 @@ body {
 
 .form-control {
   width: 100%;
-  padding: 6px 10px;
-  font-size: 12px;
+  padding: 7px 10px;
+  font-size: 13px;
   border: 1px solid #cbd5e1;
   border-radius: 5px;
   outline: none;
@@ -671,6 +773,67 @@ body {
   justify-content: flex-end;
   gap: 8px;
   margin-top: 16px;
+}
+
+/* MOBILE AND SMALL SCREEN MEDIA QUERIES (< 768px) */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .logo-section {
+    justify-content: space-between;
+  }
+
+  .toolbar-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .customer-select-group {
+    grid-column: span 2;
+    display: flex;
+    width: 100%;
+  }
+
+  .customer-select {
+    flex: 1;
+    min-width: 0;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .btn {
+    min-height: 38px;
+    font-size: 12.5px;
+  }
+
+  .workspace {
+    padding: 12px 8px 60px;
+  }
+
+  .quick-helpers-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .mobile-scroll-hint {
+    display: inline-flex;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    padding: 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }
 
 /* NATIVE PRINT STYLES */
@@ -691,6 +854,8 @@ body {
   .no-print,
   .app-header,
   .quick-helpers-bar,
+  .mode-toggle-bar,
+  .mobile-scroll-hint,
   .col-action,
   .modal-overlay,
   .editable-input,
@@ -707,11 +872,18 @@ body {
     margin: 0 !important;
   }
 
+  .invoice-viewport-container {
+    padding: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
   .invoice-wrapper {
     box-shadow: none !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
+    transform: none !important;
   }
 
   .invoice-sheet {
