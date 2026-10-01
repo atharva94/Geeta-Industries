@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cust-1",
+    "name": "LOKMAT MEDIA Pvt. Ltd.",
+    "address": "34/A, Sinhagad road, Vadgoan KH, Pune",
+    "gstNo": "27AAACL1888J1Z6",
+    "shipTo": "SAME AS GIVEN",
+    "phone": "020-24601000",
+    "email": "procurement@lokmat.com"
+  },
+  {
+    "id": "cust-2",
+    "name": "SAKAL PAPERS PVT. LTD.",
+    "address": "595, Budhwar Peth, Near Shaniwar Wada, Pune - 411002",
+    "gstNo": "27AAACS1234F1Z9",
+    "shipTo": "SAME AS GIVEN",
+    "phone": "020-24405555",
+    "email": "purchase@sakaltimes.com"
+  },
+  {
+    "id": "cust-3",
+    "name": "KIRLOSKAR PNEUMATIC CO. LTD.",
+    "address": "Hadapsar Industrial Estate, Pune - 411013",
+    "gstNo": "27AAACK5522K1ZL",
+    "shipTo": "Hadapsar Industrial Estate, Plot No. 1, Pune",
+    "phone": "020-26727000",
+    "email": "stores@kirloskar.com"
+  },
+  {
+    "id": "cust-4",
+    "name": "BHARAT FORGE LIMITED",
+    "address": "Mundhwa, Pune Cantonment, Pune - 411036",
+    "gstNo": "27AAACB3490G1Z2",
+    "shipTo": "SAME AS GIVEN",
+    "phone": "020-67042777",
+    "email": "vendor@bharatforge.com"
+  },
+  {
+    "id": "cust-5",
+    "name": "TATA AUTOCOMP SYSTEMS LTD.",
+    "address": "TACO House, Damle Path, Off Law College Road, Pune - 411004",
+    "gstNo": "27AAACT4410H1ZZ",
+    "shipTo": "Chakan MIDC Phase II, Pune",
+    "phone": "020-66085000",
+    "email": "supplychain@tataautocomp.com"
+  }
+]
